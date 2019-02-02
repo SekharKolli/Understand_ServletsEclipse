@@ -44,6 +44,7 @@ local.properties
 .classpath
 .settings/
 .loadpath
+.launch
 
 
 # External tool builders
