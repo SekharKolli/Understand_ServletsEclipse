@@ -8,7 +8,6 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.stream.Stream;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -39,10 +38,7 @@ public class ShowSimpleLogin extends HttpServlet {
 	
 	private void readHTMLFile(PrintWriter out) throws IOException {
 		String filePath = "C:\\Users\\SekharMaster\\Documents\\JavaAdvanceTopics\\Understand_ServletsEclipse\\WebContent\\SampleLogin.html";
-		
-		Stream<String> htmlLines = Files.lines(Paths.get(filePath));
-		
-		htmlLines.forEach(out::println);
+		Files.lines(Paths.get(filePath)).forEach(out::println); // Java streams to read files.
 		
 	}// EO methodName()
 
